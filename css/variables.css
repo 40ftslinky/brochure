@@ -1,0 +1,143 @@
+/* variables.css */
+
+:root {
+    /* page */
+    --page-variable: var(--default);
+    /* colours */
+    
+    /* spacing */
+    --gutter: 5vw /*6rem*/;
+    --gap-sm: 1rem;
+    --gap: 2rem;
+    --gap-large: 4rem;
+    --gap-large: calc(70/1920 *100vw);
+    --gap-xlarge: 6rem;
+    --gap-xs: 0.75rem;
+    
+    /* sizes */
+    /* (to allow for browswers with scroll bars) */
+    /* --fullwidth: calc(100vw - (100vw - 100%)); */
+    /* --max-width: var(--fullwidth); */
+    /* --max-col-width: calc(var(--fullwidth) - (var(--gutter) * 2)); */
+    
+    --max-width: 100vw;
+    --max-col-width: calc(100vw - (var(--gutter) * 2));
+    --header-height: 124px;
+    --logo-width: 170px;
+    --logo-height: 56px;
+    --nav-width: 615px;
+    --nav-seconday-width: 100px;
+    --hero-height: calc(100vh - var(--header-height));
+
+    /*  */
+    --button-padding-h:1rem;
+    --menu-padding-h:1rem;
+    --nav-padding: calc(var(--logo-width) + (var(--gap-large)*2) - var(--menu-padding-h));
+
+    /* animation */
+    --transition: all 300ms ease-in-out;
+    --transition-button: all 250ms ease-in-out;
+    --transition-slow: all 500ms cubic-bezier(0.5, 0, 0.75, 0);
+    --transition-slow-delay: all 500ms cubic-bezier(0.5, 0, 0.75, 0) 500ms;
+    --transition-slow-part:500ms cubic-bezier(0.5, 0, 0.75, 0) 500ms;
+    /* image */
+    --mix-blend: hard-light;
+
+   
+    --z-index-grad: 11;
+    --z-index-logo: 1001;
+    --z-index-menu: 1111;
+    --z-index-stack: 1111;
+    --z-index-hover: 888;
+    --z-index-nav: 9999;
+    --z-index-popup: 9999;
+    --z-index-close: 222;
+}
+
+.home {
+    --default: var(--color-primary);
+    --default-light: var(--color-primary-light);
+    --default-dark: var(--color-primary-dark);
+    --default-rgb: var(--color-primary-rgb);
+}
+
+.secondary {
+    --default: var(--color-secondary);
+    --default-light: var(--color-secondary-light);
+    --default-dark: var(--color-secondary-dark);
+    --default-rgb: var(--color-secondary-rgb);
+}
+
+.tertiary {
+    --default: var(--color-tertiary);
+    --default-light: var(--color-tertiary-light);
+    --default-dark: var(--color-tertiary-dark);
+    --default-overlay: var(--color-tertiary-overlay);
+    --default-rgb: var(--color-tertiary-rgb);
+}
+
+.alternate {
+    --default: var(--color-alternate);
+    --default-light: var(--color-alternate-light);
+    --default-dark: var(--color-alternate-dark);
+    --default-overlay: var(--color-alternate-overlay);
+    --default-rgb: var(--color-alternate-rgb);
+}
+
+@media screen and (max-width: 1440px){
+    :root {
+        /* --max-width: 100vw; */
+        /* --max-col-width: calc(100vw - (var(--gutter)*2)); */
+    }
+}
+
+
+@media screen and (max-width: 1440px){
+    :root {
+        --gap-large: 3rem;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    :root {
+        --header-height: 70px;
+        --logo-width: 120px;
+        --logo-height: 40px;
+        --nav-width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 880px){
+    :root {
+        --gutter: 2rem;
+        --gap-sm: 0.5rem;
+        --gap: 1rem;
+        --gap-large: 2rem;
+        --gap-xlarge: 3rem;
+        --gap-xxl: 6rem;
+        --gap-xs: 1rem;
+    }
+}
+
+
+:root {
+    --column-width-xs: calc(var(--max-width) - var(--gap) * 2);
+    --column-width: calc(var(--max-width) - var(--gutter) * 2);
+    --fourth-width: calc((var(--column-width) / 4) - (var(--gap) * 3/4));
+    --third-width: calc(var(--max-width) / 3);
+    --qtr-width: var(--fourth-width);
+    --hlf-width: calc((var(--column-width) / 2) - (var(--gap) / 3));
+    --qtr-ratio-height: calc(var(--fourth-width) * 0.5625);
+    --hlf-ratio-height: calc(var(--hlf-width) * 0.5625);
+    --hlf-width-nogap: calc(var(--max-col-width) / 2);
+    --one-half-max-width: calc(var(--max-col-width) / 2 - (var(--gap-large) * 1/2));
+    --one-half-max-width-smgap: calc(var(--column-width-xs) / 2 - (var(--gap-xs) * 1/2));
+    --one-third-max-width: calc(var(--max-col-width) / 3 - (var(--gap-large) * 2/3));
+    --one-third-max-width-gap: calc(var(--max-col-width) / 3 - (var(--gap) * 2/3));
+    --one-third-max-width-smgap: calc(var(--column-width-xs) / 3 - (var(--gap-xs) * 2/3));
+    --two-thirds-max-width: calc((var(--max-col-width) * 2 / 3) - (var(--gap-large) * 1/2));
+    --one-qtr-max-width: calc(var(--max-col-width) / 4 - (var(--gap-large) * 3/4));
+    --one-sixth-max-width: calc((var(--max-col-width)  / 6) - (var(--gap) * 5/6));
+    --one-sixth: var(--max-width);
+}
