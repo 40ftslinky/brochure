@@ -1,0 +1,44 @@
+/* structure.css */
+
+.hero {
+    height: var(--hero-height);
+    background-color: #000;
+    color: var(--white);
+    background-image: url('../assets/images/praemium_bull.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: fill;
+    max-height: calc(100vw *9/16);
+}
+
+.hero .column p {
+    max-width: 27ch;
+}
+
+#market-leader {
+    color: var(--white);
+}
+
+#the-solution {
+    color: var(--white);
+    background-color: #000;
+    background-image: url('../assets/images/praemium_solution.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: fill;
+    position: relative;
+}
+#the-solution::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.6) 30%);
+}
+
+#the-solution .column p {
+    max-width: 44ch;
+}

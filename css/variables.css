@@ -22,7 +22,9 @@
     
     --max-width: 100vw;
     --max-col-width: calc(100vw - (var(--gutter) * 2));
-    --header-height: 124px;
+    --header-height: 140px;
+    --top_nav-height: 87px;
+    --bottom_nav-height: 42px;
     --logo-width: 170px;
     --logo-height: 56px;
     --nav-width: 615px;

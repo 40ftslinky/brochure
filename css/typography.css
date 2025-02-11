@@ -16,11 +16,13 @@
     
     --rem-base: 62.5%;
     
-    --font-size-small: var(--font-size-body-sm-mobile);
-    --font-size-body: var(--font-size-body-base-mobile);
+    --font-size-xsmall: .6em;
     --font-size-label: 0.8em;
-    --font-size-large: var(--font-size-body-lg-mobile);
-    --font-size-footer: var(--font-size-body-sm-mobile);
+    --font-size-small: 1em;
+    --font-size-body: 1.2em;
+    --font-size-medium: 1.3em;
+    --font-size-large: 1.4em;
+    --font-size-footer: var(--font-size-small);
     
     --line-height-small: 1.14;
     --line-height-regular: 1.2;
@@ -38,6 +40,7 @@
     
     --font-weight-body: var(--font-weight-regular);
     --font-weight-heading: var(--font-weight-heavy);
+    --serif-font-weight: var(--font-weight-regular);
     
     --letter-spacing-small: -0.02em;
     --letter-spacing-body: -0.01em;
@@ -71,8 +74,8 @@
     --line-height-h5: 1.1;
     --line-height-h6: 1.1;
     
-    --font-weight-h1: var(--font-weight-regular);
-    --font-weight-h2: var(--font-weight-semibold);
+    --font-weight-h1: var(--serif-font-weight);
+    --font-weight-h2: var(--serif-font-weight);
     --font-weight-h3: var(--font-weight-regular);
     --font-weight-h4: var(--font-weight-regular);
     --font-weight-h5: var(--font-weight-extrabold);
@@ -98,6 +101,12 @@
     100 =100/1000 em =0.10 em 
     based on an Em Size of 1000 - not always the case
     */
+
+    /* specific */
+    --font-family-menu: var(--base-font-family);
+    --font-size-menu: var(--font-size-medium);
+    --font-weight-menu: var(--font-weight-regular);
+    --letterspacing-menu: 0.08em;
    
 }
 
@@ -118,7 +127,7 @@
     background: var(--secondary);
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote {
+p, blockquote {
     max-width: 75ch;
 }
 
@@ -194,13 +203,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
-h1, h3, h4 {
+h1, h2 {
     font-family: var(--heading-serif);
-    font-weight: var(--heading-font-weight);
+    font-weight: var(--serif-font-weight);
 }
 
-
-h2, h5, h6, h7 {
+h3, h4, h5, h6, .h7 {
     font-family: var(--heading-font-family);
     font-weight: var(--heading-font-weight);
 }
@@ -225,13 +233,13 @@ body {
     line-height: var(--line-height-body)
 }
 
-.body-small {
+.small {
     font-size: var(--font-size-small);
     letter-spacing: var(--letter-spacing-small);
     line-height: var(--line-height-small)
 }
 
-.body-large {
+.large {
     font-size: var(--font-size-large);
     letter-spacing: var(--letter-spacing-large);
     line-height: var(--line-height-large)
@@ -280,7 +288,7 @@ sup {
     font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h2);
     line-height: var(--line-height-h2);
-    max-width: 35ch;
+    max-width: 25ch;
 }
 
 .h3,h3 {

@@ -112,7 +112,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    
+    position: relative;
 }
 
 hr {
@@ -156,6 +156,30 @@ section > * {
     /* max-width: 75ch; */
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-large) var(--gap);
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--gutter) 0;
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-large) var(--gap);
+    width: 90vw;
+    max-width: 1200px;
+    box-sizing: border-box;
+    /* padding: 6rem 0; */
+    z-index: 1;
+}
+
 
 /* ----------------------- */
 /* structure */
@@ -164,8 +188,8 @@ section > * {
 /* rows */
 
 .row {
-    width: 100%;
-    max-width: var(--max-col-width);
+    width: var(--max-col-width);
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -199,7 +223,7 @@ section > * {
 
 .col, .column, .left-column, .right-column {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: var(--gap-large);
