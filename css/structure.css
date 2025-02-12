@@ -372,10 +372,28 @@
 
 #numbers .row {
     /* flex-wrap: wrap; */
+    gap: var(--gap);
 }
+
+@media screen and (max-width: 1080px) {
+    #numbers .row {
+        flex-wrap: wrap;
+    }
+    
+}
+
 #numbers .column.data {
     /* flex: 1 1 25%; */
     max-width: var(--one-qtr-max-width);
+}
+@media screen and (max-width: 1080px) {
+   
+    #numbers .column.data {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    
+    
 }
 
 #numbers .card {
@@ -390,6 +408,15 @@
     box-sizing: border-box;
     width: var(--one-qtr-max-width);
     max-width: var(--one-qtr-max-width);
+}
+
+@media screen and (max-width: 1080px) {
+    
+    #numbers .card {
+        width: 50%;
+        max-width: 50%;
+    }
+    
 }
 /* Numbers */
 .numbers {
