@@ -360,6 +360,155 @@
 }
 
 
+/* -------------------------------------------------- */
+/* numbers */
+/* -------------------------------------------------- */
+
+#numbers {
+    color: var(--white);
+    --text-colour: var(--white);
+    position: relative;
+}
+
+#numbers .row {
+    /* flex-wrap: wrap; */
+}
+#numbers .column.data {
+    /* flex: 1 1 25%; */
+    max-width: var(--one-qtr-max-width);
+}
+
+#numbers .card {
+    padding: var(--gap-large);
+    background: var(--gradient);
+    border-radius: 7px;
+    transition: var(--transition);
+    transform: scale(1);
+    transform-origin: center;
+    border-top: none;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    width: var(--one-qtr-max-width);
+    max-width: var(--one-qtr-max-width);
+}
+/* Numbers */
+.numbers {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 0px 0px 32px; */
+    padding-bottom: 4rem;
+    /* width: 540px;
+    height: 100px; */
+    width: 100%;
+ /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+/* $ */
+.symbol {
+    /* width: 26px;
+    height: 41px; */
+
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 85%;
+    /* identical to box height, or 41px */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+
+    /* www.praemium.com/Nero */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Frame 8 */
+.big_data_group{
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+
+    /* width: 194px;
+    height: 68px; */
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* 9.0 */
+.big_data{
+    width: auto;
+    height: 100%;
+    padding-right: 1rem;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 128px; */
+    font-size: 6.25vw;
+    line-height: 85%;
+    /* identical to box height, or 109px */
+    letter-spacing: -6px;
+
+    /* www.praemium.com/Nero */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* m */
+.small_data{
+    width: 43px;
+    height: 41px;
+
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 85%;
+    /* identical to box height, or 41px */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+
+    /* www.praemium.com/Nero */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+
+.data_details {
+
+}
+.data_details p {
+    margin-bottom: 0;
+}
+
 
 /* -------------------------------------------------- */
 /* footer */
