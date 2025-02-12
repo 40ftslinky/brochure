@@ -29,32 +29,28 @@
 /* video */
 /* -------------------------------------------------- */
 
-#fullwidth-video {
+[id*="fullwidth-video"] {
     color: var(--white);
     --text-colour: var(--white);
     background-color: #000;
-    background-image: url('../assets/images/praemium_video.jpg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain;
     position: relative;
     padding: 0;
 }
-#fullwidth-video .container {
+[id*="fullwidth-video"] .container {
     padding: 0;
     width: 100%;
     max-width: 100vw;
 }
 
-#fullwidth-video .row,
-#fullwidth-video .column {
+[id*="fullwidth-video"] .row,
+[id*="fullwidth-video"] .column {
     padding: 0;
     margin: 0;
     width: 100%;
     max-width: 100vw;
 }
 
-#fullwidth-video video {
+[id*="fullwidth-video"] video {
     /* override other styles to make responsive */
     width: 100%    !important;
     height: auto   !important;
