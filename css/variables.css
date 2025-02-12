@@ -8,6 +8,7 @@
     /* spacing */
     --gutter: 5vw /*6rem*/;
     --gap-sm: 1rem;
+    --gap-small: 1rem;
     --gap: 2rem;
     --gap-large: 4rem;
     --gap-large: calc(70/1920 *100vw);
