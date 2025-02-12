@@ -1,5 +1,10 @@
 /* structure.css */
 
+
+/* -------------------------------------------------- */
+/* hero */
+/* -------------------------------------------------- */
+
 .hero {
     height: var(--hero-height);
     background-color: #000;
@@ -20,52 +25,39 @@
     max-width: 27ch;
 }
 
+/* -------------------------------------------------- */
+/* market-leader */
+/* -------------------------------------------------- */
+
+
 #market-leader {
     color: var(--white);
 }
-
-#the-solution {
-    color: var(--white);
-    --text-colour: var(--white);
-    background-color: #000;
-    background-image: url('../assets/images/praemium_solution.jpg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: fill;
-    position: relative;
-}
-#the-solution::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.6) 30%);
-}
-
-#the-solution .column p {
-    max-width: 44ch;
-}
-
+/* ------------------------*/
 /* accordian */
 
+.wrap { flex-wrap: wrap;}
 .accordion {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--gap-large);
+    width: 100%;
 }
 .accordian-menu {
     display: flex;
     flex-direction: column;
     gap: var(--gap-medium);
+    width: 100%;
 }
 .accordian-menu-item {
     padding: var(--gap-small) 0;
     border-bottom: 1px solid rgba(var(--white-rgb), 0.4);
     width: 100%;
 }
+.accordian-menu-item:first-of-type {
+    border-top: 1px solid rgba(var(--white-rgb), 0.4);
+}
+
 .accordian-menu-item.selected, 
 .accordian-menu-item.hovered-over {
     background-color: rgba(var(--white-rgb), 0.1);
@@ -78,28 +70,42 @@
     cursor: pointer;
 }
 .accordian-content {   
-    padding: var(--gap-small) 0;
+    position: relative;
 }
 
 .accordian-item {
     position: absolute;
     opacity: 0;
     transition: var(--transition);
-    max-width: 30vw;
+    max-width: var(--hlf-width);
     box-sizing: border-box;
-    padding: var(--gap-sm);
+    padding: var(--gap);
     background-color: rgba(var(--white-rgb), 0.1);
 }
+.accordian-item > * {
+    max-width: 45ch;
+}
+
 
 @media screen and (max-width: 880px) {
     .accordian-item {
-        max-width: 80vw;
+        display: none;
+        position: relative;
+        max-width: var(--max-col-width);
+        height: 0;
     }
     
 }
 
 .accordian-item.visible {
     opacity: 1;
+}
+
+@media screen and (max-width: 880px) {
+    .accordian-item.visible  {
+        display: block;
+        height: 100%;
+    }    
 }
 
 .accordian-item ul {
@@ -119,3 +125,57 @@
     list-style-type: '»';
     padding-inline-start: 1ch;
   }
+
+
+/* -------------------------------------------------- */
+/* the-solution */
+/* -------------------------------------------------- */
+
+
+#the-solution {
+    color: var(--white);
+    --text-colour: var(--white);
+    background-color: #000;
+    background-image: url('../assets/images/praemium_solution.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    position: relative;
+}
+#the-solution::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.6) 30%);
+}
+
+#the-solution .column p {
+    max-width: 44ch;
+}
+
+
+/* Transform */
+
+#transform {
+    color: var(--white);
+    --text-colour: var(--white);
+    background: var(--gradient);
+}
+
+#transform .card {
+    padding: var(--gap);
+    background-color: rgba(var(--white-rgb), 0.1);
+    border-left: 1rem solid rgba(var(--white-rgb), 0.9);
+    transition: var(--transition);
+    transform: scale(1);
+    transform-origin: center;
+}
+
+#transform .card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 3rem rgba(var(--violet-rgb), 0.6);
+}

@@ -22,10 +22,13 @@
     /* Gradient */
     --gradient: linear-gradient(81.62deg, #46C1EB -21.44%, #625AF6 50.54%, #9351E8 122.9%);
 
+    
     /* Palette */
     --lightblue: #46C1EB;
     --indigo: #625AF6;
+    --indigo-rgb: 98, 90, 246;
     --violet: #9351E8;
+    --violet-rgb: 147, 81, 232;
     --dark-navy: #0E121F;
     --platinum: #7A97AB;
     --not-black: #231F20;

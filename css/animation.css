@@ -1,26 +1,27 @@
 /* animation.css */
 
 .animate {
-    /* opacity: 0; */
-    transition: var(--transition-slow-delay);
+    opacity: 0;
+    /* transition: var(--transition-slow-delay); */
+    transition: var(--transition-easeinout);
 }
 
 .in-view {
-    /* opacity: 1; */
+    opacity: 1;
     animation-play-state: running;
 }
 
 ._fadein-bg {
-    /* background-position: 200% center; */
-    animation: fadeInBg 1s ease-in-out;
-    animation-direction: reverse;
+    background-position: 200% center;
+    /* animation: fadeInBg 1s ease-in-out;
+    animation-direction: reverse; */
 
 }
 
 ._fadein-bg.in-view {
-    /* background-position: 200% center; */
-    animation: fadeInBg 1.5s ease-in-out;
-    animation-direction: normal;
+    background-position: 80% center;
+    /* animation: fadeInBg 1.5s ease-in-out;
+    animation-direction: normal; */
 }
 
 @keyframes fadeInBg {
@@ -35,7 +36,7 @@
 }
 
 ._fadein {
-    animation: fadeIn 1s ease-in-out;
+    /* animation: fadeIn 1s ease-in-out; */
 }
 
 @keyframes fadeIn {
@@ -47,9 +48,12 @@
     }
 }
 
-
+._fadein-up {
+    transform: translateY(20px);
+}
 ._fadein-up.in-view {
-    animation: fadeInUp 1s ease-in-out;
+    transform: translateY(0px);
+    /* animation: fadeInUp 1s ease-in-out; */
 }
 
 @keyframes fadeInUp {
@@ -63,8 +67,12 @@
     }
 }
 
+._fadein-down {
+    transform: translateY(-20px);
+}
 ._fadein-down.in-view {
-    animation: fadeInDown 1s ease-in-out;
+    transform: translateY(0px);
+    /* animation: fadeInDown 1s ease-in-out; */
 }
 
 @keyframes fadeInDown {
@@ -78,8 +86,12 @@
     }
 }
 
+._fadein-left {
+    transform: translateX(-20px);
+}
 ._fadein-left.in-view {
-    animation: fadeInLeft 1s ease-in-out;
+    transform: translateX(0px);
+    /* animation: fadeInLeft 1s ease-in-out; */
 }
 
 @keyframes fadeInLeft {
@@ -93,8 +105,12 @@
     }
 }
 
+._fadein-right {
+    transform: translateX(20px);
+}
 ._fadein-right.in-view {
-    animation: fadeInRight 1s ease-in-out;
+    transform: translateX(0px);
+    /* animation: fadeInRight 1s ease-in-out; */
 }
 
 @keyframes fadeInRight {
@@ -108,8 +124,12 @@
     }
 }
 
+._fadein-scale {
+    transform: scale(0.9);
+}
 ._fadein-scale.in-view {
-    animation: scaleIn 1s ease-in-out;
+    transform: scale(1);
+    /* animation: scaleIn 1s ease-in-out; */
 }
 
 @keyframes scaleIn {
@@ -152,4 +172,74 @@
 }
 ._delay-10 {
     animation-delay: 1s;
+}
+
+
+/*  */
+
+/* run if the browser supports it */
+@supports (animation-timeline: scroll()) {
+
+    .reverse {
+      transform: translateY(calc(-100% + 100vh));
+      flex-direction: column-reverse; /* flows in reverse order */
+    }
+  
+    .columns {
+      overflow-y: clip; /* not a scroll container! */
+    }
+  
+}
+
+/* CSS easing */
+
+.examples {
+
+    transition-timing-function: linear;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+  
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  
+    transition-timing-function: ease-in;
+    transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+  
+    transition-timing-function: ease-out;
+    transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  
+  }
+
+  :root { --transition-easeinout: all 1000ms ease-in-out; }
+
+  :root {
+    --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+    --ease-in:     cubic-bezier(0.42, 0, 1, 1);
+    --ease-out:    cubic-bezier(0, 0, 0.58, 1);
+    --in-quad:      cubic-bezier(0.550,  0.085, 0.680, 0.530);
+    --in-cubic:     cubic-bezier(0.550,  0.055, 0.675, 0.190);
+    --in-quart:     cubic-bezier(0.895,  0.030, 0.685, 0.220);
+    --in-quint:     cubic-bezier(0.755,  0.050, 0.855, 0.060);
+    --in-sine:      cubic-bezier(0.470,  0.000, 0.745, 0.715);
+    --in-expo:      cubic-bezier(0.950,  0.050, 0.795, 0.035);
+    --in-circ:      cubic-bezier(0.600,  0.040, 0.980, 0.335);
+    --in-back:      cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    --out-quad:     cubic-bezier(0.250,  0.460, 0.450, 0.940);
+    --out-cubic:    cubic-bezier(0.215,  0.610, 0.355, 1.000);
+    --out-quart:    cubic-bezier(0.165,  0.840, 0.440, 1.000);
+    --out-quint:    cubic-bezier(0.230,  1.000, 0.320, 1.000);
+    --out-sine:     cubic-bezier(0.390,  0.575, 0.565, 1.000);
+    --out-expo:     cubic-bezier(0.190,  1.000, 0.220, 1.000);
+    --out-circ:     cubic-bezier(0.075,  0.820, 0.165, 1.000);
+    --out-back:     cubic-bezier(0.175,  0.885, 0.320, 1.275);
+    --in-out-quad:  cubic-bezier(0.455,  0.030, 0.515, 0.955);
+    --in-out-cubic: cubic-bezier(0.645,  0.045, 0.355, 1.000);
+    --in-out-quart: cubic-bezier(0.770,  0.000, 0.175, 1.000);
+    --in-out-quint: cubic-bezier(0.860,  0.000, 0.070, 1.000);
+    --in-out-sine:  cubic-bezier(0.445,  0.050, 0.550, 0.950);
+    --in-out-expo:  cubic-bezier(1.000,  0.000, 0.000, 1.000);
+    --in-out-circ:  cubic-bezier(0.785,  0.135, 0.150, 0.860);
+    --in-out-back:  cubic-bezier(0.680, -0.550, 0.265, 1.550)
 }

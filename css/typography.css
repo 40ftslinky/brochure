@@ -191,6 +191,12 @@ body {
     font-style: italic;
 }
 
+h3.italic-serif {
+    font-size: 30px;
+    line-height: 1.2; 
+    max-width: 35ch;   
+}
+
 /* links */
 
 .link {
