@@ -4,11 +4,16 @@
     height: var(--hero-height);
     background-color: #000;
     color: var(--white);
+    --text-colour: var(--white);
     background-image: url('../assets/images/praemium_bull.jpg');
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: 100% center;
     background-size: fill;
     max-height: calc(100vw *9/16);
+}
+
+.hero .column {
+    gap: var(--gap-large);
 }
 
 .hero .column p {
@@ -21,6 +26,7 @@
 
 #the-solution {
     color: var(--white);
+    --text-colour: var(--white);
     background-color: #000;
     background-image: url('../assets/images/praemium_solution.jpg');
     background-repeat: no-repeat;

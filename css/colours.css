@@ -70,6 +70,16 @@
     --accent-subtle-overlay: var(--accent-overlay);
     --accent-text-over: var(--accent-dark);
 
+    --color-dark: #010101 ;
+    --color-dark-light: #333; ;
+    --color-dark-dark: #000;
+    --color-dark-rgb: 1, 1, 1;
+
+    --color-light: #f1f1f1;
+    --color-light-light: #fff;
+    --color-light-dark: #e5e5e5;
+    --color-light-rgb: 241, 241, 241 ;
+
     --light-rgb: 185, 141, 93;
     --dark-rgb: 81, 45, 7;
 

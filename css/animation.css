@@ -1,0 +1,155 @@
+/* animation.css */
+
+.animate {
+    /* opacity: 0; */
+    transition: var(--transition-slow-delay);
+}
+
+.in-view {
+    /* opacity: 1; */
+    animation-play-state: running;
+}
+
+._fadein-bg {
+    /* background-position: 200% center; */
+    animation: fadeInBg 1s ease-in-out;
+    animation-direction: reverse;
+
+}
+
+._fadein-bg.in-view {
+    /* background-position: 200% center; */
+    animation: fadeInBg 1.5s ease-in-out;
+    animation-direction: normal;
+}
+
+@keyframes fadeInBg {
+    0% {
+        opacity: 1;
+        background-position: 200% center;
+    }
+    100% {
+        opacity: 1;
+        background-position: 100% center;
+    }
+}
+
+._fadein {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+._fadein-up.in-view {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+._fadein-down.in-view {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+._fadein-left.in-view {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+._fadein-right.in-view {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+._fadein-scale.in-view {
+    animation: scaleIn 1s ease-in-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+._delay-1 {
+    animation-delay: 0.1s;
+}
+._delay-2 {
+    animation-delay: 0.2s;
+}
+._delay-3 {
+    animation-delay: 0.3s;
+}
+._delay-4 {
+    animation-delay: 0.4s;
+}
+._delay-5 {
+    animation-delay: 0.5s;
+}
+._delay-6 {
+    animation-delay: 0.6s;
+}
+._delay-7 {
+    animation-delay: 0.7s;
+}
+._delay-8 {
+    animation-delay: 0.8s;
+}
+._delay-9 {
+    animation-delay: 0.9s;
+}
+._delay-10 {
+    animation-delay: 1s;
+}

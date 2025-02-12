@@ -42,11 +42,6 @@
     --font-weight-heading: var(--font-weight-heavy);
     --serif-font-weight: var(--font-weight-regular);
     
-    --letter-spacing-small: -0.02em;
-    --letter-spacing-body: -0.01em;
-    --letter-spacing-sub: -0.0em;
-    --letter-spacing-large: -0.04em;
-    
     /* 
     --font-size-h1: var(--font-size-heading-xxl-mobile);
     --font-size-h2: var(--font-size-heading-xl-mobile);
@@ -82,12 +77,20 @@
     --font-weight-h6: var(--font-weight-bold);
     --font-weight-h7: var(--font-weight-bold);
     
-    --letter-spacing-h1: -0.055em;
+    --letter-spacing-h1: -0.01em;
     --letter-spacing-h2: -0.025em;
     --letter-spacing-h3: -0.035em;
     --letter-spacing-h4: -0.02em;
     --letter-spacing-h5: -0.02em;
     --letter-spacing-h6: -0.02em;
+    --letter-spacing-body: 0;
+    --letter-spacing-base: 0;
+
+
+    --letter-spacing-small: -0.02em;
+    --letter-spacing-sub: -0.0em;
+    --letter-spacing-large: 0;
+    
 
     /*  */
 
@@ -332,6 +335,22 @@ sup {
     font-weight: var(--font-weight-regular);
     letter-spacing: var(--letter-spacing-regular);
     line-height: var(--line-height-regular)
+}
+
+.brand_heading {
+    margin-bottom: 2rem;
+}
+.brand_heading::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 6px;
+    background-color: var(--white);
+    margin-top: 4vw;
+}
+
+.dark .brand_heading::after {
+    background-color: var(--opposite);
 }
 
   

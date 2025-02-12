@@ -172,7 +172,7 @@ section .container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: var(--gap-large) var(--gap);
+    gap: var(--gap);
     width: 90vw;
     max-width: 1200px;
     box-sizing: border-box;
@@ -226,7 +226,7 @@ section .container {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    gap: var(--gap-large);
+    gap: var(--gap);
 }
 
 
