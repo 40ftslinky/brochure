@@ -54,13 +54,15 @@
     --font-size-xsmall: .6em;
     --font-size-xs: .6em;
     --font-size-label: 0.8em;
+    --font-size-disclaimer: 0.8em;
     --font-size-small: 1em;
     --font-size-sm: 1em;
     --font-size-base: 1.2em;
     --font-size-body: 1.2em;
     --font-size-medium: 1.3em;
     --font-size-large: 1.6em;
-    --font-size-footer: var(--font-size-small);
+    --font-size-footer: 0.875em;
+    --font-size-button: 1em;
     
     --leading-flat: 0.95;
     --line-height-base: 1.7;
@@ -74,7 +76,7 @@
     --line-height-small: 1.14;
     --line-height-regular: 1.2;
     --line-height-body: 1.4;
-    --line-height-large: 1.45;
+    --line-height-large: 1.6;
     
     --font-weight-h1: var(--serif-font-weight);
     --font-weight-h2: var(--serif-font-weight);
@@ -117,7 +119,12 @@
     --font-family-menu: var(--base-font-family);
     --font-size-menu: var(--font-size-medium);
     --font-weight-menu: var(--font-weight-regular);
-    --letterspacing-menu: 0.08em;
+    --letter-spacing-menu: 0.08em;
+
+    --font-family-button: var(--base-font-family);
+    --font-size-button: var(--font-size-medium);
+    --font-weight-button: var(--font-weight-bold);
+    --letter-spacing-button: 0.08em;
    
 }
 
@@ -125,7 +132,7 @@
 * {
     font-family: var(--base-font-family);
     font-weight: var(--base-font-weight);
-    letter-spacing: var(--letterspacing-base);
+    letter-spacing: var(--letter-spacing-base);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -223,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
-h1, h2 {
+h1, h2, h5.serif {
     font-family: var(--heading-serif);
     font-weight: var(--serif-font-weight);
 }
@@ -353,6 +360,13 @@ sup {
     font-weight: var(--font-weight-h5);
     letter-spacing: var(--letter-spacing-h5);
     line-height: var(--line-height-h5)
+}
+
+h5.serif {
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    padding-top: 2vw;
+    border-top: 1px solid rgba(var(--white-rgb), 0.4);
 }
 
 .h6,h6 {

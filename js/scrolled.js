@@ -45,6 +45,11 @@ for (let i = 0; i < links.length; i++) {
             top: target.offsetTop - document.querySelector('header').offsetHeight,
             behavior: 'smooth'
         });
+        // on scrollTo complete, remove 'is-scrolled' from header
+        setTimeout(() => {
+            document.querySelector('header').classList.remove('is-scrolled');
+        }, 1000);
+        
     });
 }
 
