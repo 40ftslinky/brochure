@@ -389,15 +389,16 @@
 @media screen and (max-width: 1080px) {
    
     #numbers .column.data {
-        flex: 1 1 50%;
-        max-width: 50%;
+        flex: 1 1 var(--one-half-max-width);
+        max-width: var(--one-half-max-width);
     }
     
     
 }
 
 #numbers .card {
-    padding: var(--gap-large);
+    /* padding: var(--gap-large); */
+    padding: 2.5vw;
     background: var(--gradient);
     border-radius: 7px;
     transition: var(--transition);
@@ -413,10 +414,15 @@
 @media screen and (max-width: 1080px) {
     
     #numbers .card {
-        width: 50%;
-        max-width: 50%;
+        width: var(--one-half-max-width);
+        max-width: var(--one-half-max-width);
     }
     
+}
+@media screen and (min-width: 1440px) {
+    #numbers .card {
+        padding: 3rem;
+    }
 }
 /* Numbers */
 .numbers {
@@ -500,6 +506,12 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .big_data {
+        font-size: 80px;
+    }
 }
 
 /* m */
