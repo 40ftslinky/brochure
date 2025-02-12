@@ -44,7 +44,8 @@
     */
 
     --font-size-huge: 6.25vw; /* 120px */
-    --font-size-h1: 3.375vw;
+    --font-size-h1-old: 3.375vw; /* 64px */
+    --font-size-h1: 4.275vw; /* 81px */
     --font-size-h2: 48px;
     --font-size-h3: 36px;
     --font-size-h4: 30px;
@@ -74,9 +75,9 @@
     --line-height-h6: 1.1;
 
     --line-height-small: 1.14;
-    --line-height-regular: 1.2;
-    --line-height-body: 1.4;
-    --line-height-large: 1.6;
+    --line-height-regular: var(--line-height-base);
+    --line-height-body: var(--line-height-base);
+    --line-height-large: var(--line-height-base);
     
     --font-weight-h1: var(--serif-font-weight);
     --font-weight-h2: var(--serif-font-weight);
@@ -98,6 +99,7 @@
 
     --letter-spacing-small: -0.02em;
     --letter-spacing-sub: -0.0em;
+    --letter-spacing-medium: 0;
     --letter-spacing-large: 0;
     --letter-spacing-wide: 0.01;
     
