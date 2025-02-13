@@ -36,7 +36,7 @@ header.endHeader {
 
 header .top_nav-container {
     position: relative;
-    max-width: var(--max-col-width);
+    /* max-width: var(--max-col-width); */
     width: 100%;
     padding: 2rem 5vw;    
     /* height: 70px;
@@ -44,7 +44,7 @@ header .top_nav-container {
     /* margin: auto; */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--gap-large);
     background-color: #000000;
 }
@@ -53,16 +53,31 @@ header .top_nav-container {
     padding: 1rem 5vw;
 }
 
+@media screen and (max-width: 1080px) {
+    header .top_nav-container {
+        max-width: var(--max-col-width);
+    }
+    
+}
+
 header .nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     /* margin-bottom: 20px; */
     padding: calc(var(--gap)/4) 0;    
     position: absolute;
     top: var(--top_nav-height);
     z-index: -1;;
+}
+@media screen and (max-width: 1080px) {
+    header .nav-container {
+        padding: 5px;
+        justify-content: space-between;
+
+    }
+    
 }
 
 .is-scrolled .nav-container {
@@ -84,8 +99,14 @@ header .nav-container {
     justify-content: space-between;
     align-items: center;
     /* margin-bottom: 20px; */
-    padding: 0 var(--gutter);    
+    /* padding: 0 var(--gutter);     */
     position: relative;
+}
+@media screen and (max-width: 1080px) {
+    .nav-wrapper {
+        max-width: unset;
+    }
+    
 }
 
 nav {
@@ -97,6 +118,7 @@ nav {
     /* padding: 10px 0;     */
     position: relative;
     padding-left: 47px;
+    width: 100%;
 }
 
 .nav-container {
@@ -109,6 +131,19 @@ nav {
     gap: var(--gap-large);
     background: var(--gradient);
 }
+
+
+@media screen and (max-width: 1080px) {
+    :root {
+        --bottom-nav-height: 40px;
+    }
+    .nav-container {
+        height: var(--bottom-nav-height);
+        /* height: 40px; */
+    }
+    
+}
+
 
 
 /* logo */
@@ -210,13 +245,13 @@ nav {
         background-color: rgba(var(--white-rgb), 0);
         border-radius: 50px;
         position: absolute;
-        right: 2rem;
+        right: 0;
         cursor: pointer;
         z-index: 1001;
         transition: var(--transition);
         
         &:hover  {
-            background-color: var(--gray-200);
+            background-color: rgba(var(--white-rgb), 0.2);
         }
 
         & span,
@@ -281,12 +316,12 @@ nav {
         /* visibility: hidden; */
         position: absolute;
         /* top: calc(var(--header-height) ); */
-        top: 56px;
+        top: 25px;
         left: 0;
         padding: var(--gap-large);
         width: 100%;
         max-width: calc(100vw - (var(--gap-large)*2));
-        height: calc(100vh - (var(--header-height)/2));
+        /* height: calc(100vh - (var(--header-height)/2)); */
         visibility: hidden;
         opacity: 0;
         background-color: white;
@@ -477,6 +512,13 @@ nav.desktop ul li a span:hover,
     display: none;
 }
 
+
+@media screen and (max-width: 1080px) {
+    .desktop-menu {
+        display: none !important;
+    }
+    
+}
 /* ----------------------- */
 /* MOBILE */
 
