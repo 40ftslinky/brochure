@@ -368,6 +368,7 @@
     color: var(--white);
     --text-colour: var(--white);
     position: relative;
+    background-color: rgba(var(--white-rgb), 0.05);
 }
 
 #numbers .row {

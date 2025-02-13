@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            element.innerHTML = (progress * (end - start) + start).toFixed(1);
+            let value = (progress * (end - start) + start).toFixed(1);
+            element.innerHTML = value.endsWith('.0') ? value.slice(0, -2) : value;
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             }
