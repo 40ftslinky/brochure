@@ -415,7 +415,7 @@
     
     #numbers .card {
         width: var(--one-half-max-width);
-        max-width: var(--one-half-max-width);
+        max-width: 220px;
     }
     
 }
@@ -506,6 +506,12 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+@media screen and (max-width: 1080px) {
+    .big_data {
+        font-size: 68px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
