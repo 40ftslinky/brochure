@@ -7,10 +7,13 @@ document.getElementById('menu-button').onclick = function() {
     this.classList.toggle('active');
     document.getElementsByTagName('header')[0].classList.toggle('active');
     //document.getElementsByClassName('[class*="submenu"]')[0].classList.remove('open');
-	document.getElementsByClassName('submenu')[0].classList.remove('open');
+	// document.getElementsByClassName('submenu')[0].classList.remove('open');
     // document.getElementsByClassName('wp-block-navigation-submenu')[0].classList.remove('open');
     document.body.classList.toggle('no_scroll'); // Add 'no_scroll' class to body
-	
+	// set attribute class  'paused' to video element
+    const video = document.getElementById('loadvideo');
+    video.setAttribute('class', 'paused');
+    video.pause();
 
 	// Select all 'ul' elements and remove the 'open' class from each
 	const ulElements = document.querySelectorAll('ul');

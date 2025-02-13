@@ -73,7 +73,7 @@ header .nav-container {
 }
 @media screen and (max-width: 1080px) {
     header .nav-container {
-        padding: 5px;
+        padding: 0;
         justify-content: space-between;
 
     }
@@ -83,6 +83,7 @@ header .nav-container {
 .is-scrolled .nav-container {
     padding: 0 0 ;
     top: 0;
+    top: calc(var(--header-height) - var(--bottom-nav-height));
 }
 
 .header, .top_nav-container, .nav-container, nav {
@@ -135,10 +136,11 @@ nav {
 
 @media screen and (max-width: 1080px) {
     :root {
-        --bottom-nav-height: 40px;
+        --bottom-nav-height: 10px;
     }
     .nav-container {
         height: var(--bottom-nav-height);
+        padding: 0;
         /* height: 40px; */
     }
     
@@ -316,7 +318,7 @@ nav {
         /* visibility: hidden; */
         position: absolute;
         /* top: calc(var(--header-height) ); */
-        top: 25px;
+        top: calc(var(--bottom-nav-height)/2);
         left: 0;
         padding: var(--gap-large);
         width: 100%;
