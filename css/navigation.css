@@ -83,7 +83,12 @@ header .nav-container {
 .is-scrolled .nav-container {
     padding: 0 0 ;
     top: 0;
-    top: calc(var(--header-height) - var(--bottom-nav-height));
+    /* top: calc(var(--header-height) - var(--bottom-nav-height)); */
+}
+@media screen and (max-width: 1080px) {
+    .is-scrolled .nav-container {
+        top: calc(var(--header-height) - var(--bottom-nav-height));
+    }   
 }
 
 .header, .top_nav-container, .nav-container, nav {
